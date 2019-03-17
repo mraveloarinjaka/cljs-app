@@ -1,10 +1,10 @@
-(ns leiningen.new.cljs-app
+(ns leiningen.new.shadow-cljs-app
   (:require [leiningen.new.templates :refer [renderer sanitize name-to-path ->files]]
             [leiningen.core.main :as main]))
 
-(def render (renderer "cljs-app"))
+(def render (renderer "shadow-cljs-app"))
 
-(defn cljs-app
+(defn shadow-cljs-app
   "Generate boilerplate code to setup a clojurescript project built using shadow-cljs"
   [name]
   (let [data {:name name
