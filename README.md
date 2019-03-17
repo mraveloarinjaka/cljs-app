@@ -6,7 +6,7 @@ A Leiningen template for setting up a clojurescript project built using shadow-c
 
 ## Usage
 
-lein new cljs-app {name}
+lein new shadow-cljs-app {name}
 
 ## License
 
