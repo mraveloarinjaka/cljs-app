@@ -1,3 +1,5 @@
+[![Clojars Project](https://img.shields.io/clojars/v/shadow-cljs-app/lein-template.svg)](https://clojars.org/shadow-cljs-app/lein-template)
+
 # cljs-app
 
 A Leiningen template for setting up a clojurescript project built using shadow-cljs.
