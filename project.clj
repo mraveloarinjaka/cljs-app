@@ -1,4 +1,4 @@
-(defproject shadow-cljs-app/lein-template "1.0.0"
+(defproject shadow-cljs-app/lein-template "1.0.1-SNAPSHOT"
   :description "boilerplate to setup a clojurescript project built using shadow-cljs"
   :url "https://github.com/mraveloarinjaka/cljs-app"
   :license {:name "Eclipse Public License"
