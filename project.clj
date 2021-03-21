@@ -3,11 +3,11 @@
   :url "https://github.com/mraveloarinjaka/cljs-app"
   :license {:name "Eclipse Public License"
             :url  "http://www.eclipse.org/legal/epl-2.0"}
-  :repositories [["releases" {:url           "https://repo.clojars.org"
+  :repositories [["releases" {:url           "https://clojars.org/repo"
                               :sign-releases false
                               :username      :env/clojars_username
                               :password      :env/clojars_password}]
-                 ["snapshots" {:url           "https://repo.clojars.org"
+                 ["snapshots" {:url           "https://clojars.org/repo"
                                :sign-releases false
                                :username      :env/clojars_username
                                :password      :env/clojars_password}]]
