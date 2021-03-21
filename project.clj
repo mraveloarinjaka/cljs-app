@@ -3,10 +3,20 @@
   :url "https://github.com/mraveloarinjaka/cljs-app"
   :license {:name "Eclipse Public License"
             :url  "http://www.eclipse.org/legal/epl-2.0"}
-  :repositories [["releases" {:url      "https://repo.clojars.org"
-                              :username :env/clojars_username
-                              :password :env/clojars_password}]
-                 ["snapshots" {:url      "https://repo.clojars.org"
-                               :username :env/clojars_username
-                               :password :env/clojars_password}]]
+  :repositories [["releases" {:url           "https://repo.clojars.org"
+                              :sign-releases false
+                              :username      :env/clojars_username
+                              :password      :env/clojars_password}]
+                 ["snapshots" {:url           "https://repo.clojars.org"
+                               :sign-releases false
+                               :username      :env/clojars_username
+                               :password      :env/clojars_password}]]
+  :release-tasks [["vcs" "assert-committed"]
+                  ["change" "version" "leiningen.release/bump-version" "release"]
+                  ["vcs" "commit"]
+                  ["vcs" "tag" "--no-sign"]
+                  ["deploy"]
+                  ["change" "version" "leiningen.release/bump-version"]
+                  ["vcs" "commit"]
+                  ["vcs" "push"]]
   :eval-in-leiningen true)
