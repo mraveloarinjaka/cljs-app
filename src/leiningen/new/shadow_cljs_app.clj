@@ -20,3 +20,11 @@
              "src/dev"
              ["src/dev/cljs/user.cljs" (render "user.cljs" data)]
              "src/test")))
+
+(comment
+
+  (let [name "com.mrave.ninja.test-application"]
+    [(name-to-path name)
+     (sanitize name)])
+
+  )

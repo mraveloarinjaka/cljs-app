@@ -4,15 +4,15 @@
   "src/dev"
   "src/test"]
 
- :dependencies [[binaryage/devtools "0.9.10"]
-                [cider/cider-nrepl "0.21.1"]
-                [thheller/shadow-cljsjs "0.0.16"]]
+ :dependencies [[binaryage/devtools "1.0.2"]
+                [cider/cider-nrepl "0.25.9"]
+                [thheller/shadow-cljsjs "0.0.21"]]
 
  ;; set an nrepl port for connection to a REPL.
- :nrepl        {:port 9000}
+ :nrepl {:port 9000}
 
  :builds
- {:app {:target :browser
+ {:app {:target     :browser
         :output-dir "resources/public/js"
         :asset-path "/js"
 
@@ -21,11 +21,11 @@
          {:entries [{{name}}.main]}}
 
         :devtools
-        ;; before live-reloading any code call this function
-        {:before-load {{name}}.main/stop
+        {;; before live-reloading any code call this function
+         :before-load {{name}}.main/stop
          ;; after live-reloading finishes call this function
-         :after-load {{name}}.main/start
+         :after-load  {{name}}.main/start
          ;; serve the public directory over http at port 8700
-         :http-root    "resources/public"
-         :http-port    8700}
+         :http-root   "resources/public"
+         :http-port   8700}
         }}}
